@@ -1,0 +1,15 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo "Install"
+  build:
+    commands:
+      - echo "Build - copying static files"
+      - mkdir -p dist
+      - cp -R * dist || true
+artifacts:
+  files:
+    - "**/*"
+  base-directory: dist
