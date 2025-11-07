@@ -5,9 +5,10 @@ phases:
     commands:
       - echo "Install"
   build:
-  commands:
-    - echo "Breaking build intentionally"
-    - exit 1
+    commands:
+      - echo "Build - copying static files"
+      - mkdir -p dist
+      - cp -R * dist || true
 
 artifacts:
   files:
